@@ -14,9 +14,10 @@ dependencies
 
 
 
-notes...
+notes... (not all files listed here)
 
-head -n20 * | grep -e "==>" -e "#fields" -e "#types"
+```
+$ head -n20 * | grep -e "==>" -e "#fields" -e "#types"
 ==> communication.log <==
 #fields	ts	peer	src_name	connected_peer_desc	connected_peer_addr	connected_peer_porlevel	message
 #types	time	string	string	string	addr	port	string	string
@@ -61,3 +62,4 @@ head -n20 * | grep -e "==>" -e "#fields" -e "#types"
 ==> x509.log <==
 #fields	ts	id	certificate.version	certificate.serial	certificate.subject	certificate.issuer	certificate.not_valid_before	certificate.not_valid_after	certificate.key_alg	certificate.sig_alg	certificate.key_type	certificate.key_length	certificate.exponent	certificate.curve	san.dns	san.uri	san.email	san.ip	basic_constraints.ca	basic_constraints.path_len
 #types	time	string	count	string	string	string	time	time	string	string	string	count	string	string	vector[string]	vector[string]	vector[string]	vector[addr]	bool	count
+```
