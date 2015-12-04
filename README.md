@@ -1,20 +1,24 @@
 ## BroScanner:
 ### python streaming scanner for bro logfiles
 
+This project aims to provide a framework for processing [bro](https://www.bro.org) logfiles using python. It will soon provide several passive scanning scripts, as well as passive intrusion detection and prompt notification of the necessary parties.
+
+Currently, running main.py with a logfile as an argument outputs json data.
+
+    $ python main.py known_hosts.log
+
+(the path is automatically prepended, see config.py)
+
+
 dependencies
 - python 2.7
-- my version of pytailer: https://github.com/red-green/pytailer
-- bro
-- pync for OSX notifications (more coming soon)
+- my version of pytailer: https://github.com/red-green/pytailer **please do not use the six8 version as it will not catch rotated logfiles**
+- bro: https://www.bro.org
+- pync for OSX notifications: https://pypi.python.org/pypi/pync **not required**
 
 
 
-
-
-
-
-
-notes... (not all files listed here)
+Fields... (not all files listed here)
 
 ```
 $ head -n20 * | grep -e "==>" -e "#fields" -e "#types"

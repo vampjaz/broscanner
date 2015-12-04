@@ -10,6 +10,13 @@ import bparser
 import notifiers
 
 
-for i in bparser.parseentries('known_services.log'):
+## simple alert notifier:
+'''
+for i in bparser.parseentries('notice.log'):
 	print i
-	#notifiers.notify(i['msg'])
+	notifiers.notify(i['msg'])
+'''
+
+## simple json parser
+for i in bparser.parseentries(sys.argv[1]):
+	print i
