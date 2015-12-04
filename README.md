@@ -2,8 +2,10 @@
 ### python streaming scanner for bro logfiles
 
 dependencies
-- pytailer: https://github.com/six8/pytailer
-- bro:
+- python 2.7
+- my version of pytailer: https://github.com/red-green/pytailer
+- bro
+- pync for OSX notifications (more coming soon)
 
 
 
