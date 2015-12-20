@@ -8,11 +8,11 @@ import json
 
 from config import *
 import bparser
-import notifiers
 
 
 ## simple alert notifier:
 '''
+import notifiers
 for i in bparser.parseentries('notice.log'):
 	print i
 	notifiers.notify(i['msg'])
