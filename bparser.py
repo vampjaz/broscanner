@@ -22,7 +22,7 @@ def convert(entry,fmt,empty,unset,sep):
 	try:
 		if entry in (empty,unset):
 			return None
-		if 'set[' in entry:
+		if 'set[' in entry:  #### TODO: set and vector are broken
 			ret = []
 			ifmt = entry.split('[')[-1].split(']')[0]
 			for i in entry.split(sep):
