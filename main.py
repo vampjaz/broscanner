@@ -4,6 +4,7 @@
 import os, sys
 import tailer
 import time
+import json
 
 from config import *
 import bparser
@@ -19,4 +20,4 @@ for i in bparser.parseentries('notice.log'):
 
 ## simple json parser
 for i in bparser.parseentries(sys.argv[1]):
-	print i
+	print json.dumps(i)

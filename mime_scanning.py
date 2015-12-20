@@ -7,9 +7,5 @@ from config import *
 import bparser
 import notifiers
 
-for i in bparser.parseentries('files.log'):
-	if not i['local_orig'] or i['mime_type'] in forbidden_types: ## scan all of these types
-		print
-		print "{} downloaded a file from {} via {}".format(i['rx_hosts'],i['tx_hosts'],i['source'])
-		print "Filename: {}  length: {}  mime type: {}".format(i['filename'],i['total_bytes'],i['mime_type'])
-		print "MD5: {}  SHA1: {}".format(i['md5'],i['sha1'])
+for i in bparser.parseentries('http.log'):
+	print i['resp_mime_types']
